@@ -49,7 +49,7 @@ class CategorySerializer(serializers.ModelSerializer):
         children = validated_data.get('children')
         try:
             with transaction.atomic():
-                self.recursive_instanse(parent=node, children=children)
+                self.recursive_instance(parent=node, children=children)
         except IntegrityError as ex:
             print(ex)
         return node
