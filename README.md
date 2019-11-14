@@ -2,7 +2,7 @@
 
 ### Описание:
    Решение задания представленно в приложении categoriestree.
-   Для API реализовано с помощью Django и Django REST framework.
+   API реализовано с помощью Django и Django REST framework.
    Для работы с деревьями данных использал: django-mptt.
    При разработке использовал Python 3.6
    Для простоты проверки и работы (так как пример небольшой и простой) использовал sqlite в качестве БД.
@@ -24,4 +24,8 @@
     ├── manage.py                          
     ├── README.md                          
     ├── requirements.txt                   # Необходимые зависимости
+    
+### Демонстрация работы:
+![Screenshot1](http://dl3.joxi.net/drive/2019/11/14/0038/4064/2539488/88/8bda6d35a0.png)
+![Screenshot](http://dl3.joxi.net/drive/2019/11/14/0038/4064/2539488/88/088705c3d0.png)
             
