@@ -30,7 +30,7 @@ class CategorySerializer(serializers.ModelSerializer):
         model = Category
         fields = ('id', 'name', 'parents', 'children', 'siblings')
 
-    def recursive_instanse(self, parent, children):
+    def recursive_instance(self, parent, children):
         """
         Метод рекурсивно создающий или обновляющий дерево категорий
         :param parent: Родитель узла
@@ -39,7 +39,7 @@ class CategorySerializer(serializers.ModelSerializer):
         for child in children:
             if child.get('children', None):
                 new_parent, created = Category.objects.update_or_create(name=child.get('name'), parent=parent)
-                self.recursive_instanse(new_parent, child.get('children'))
+                self.recursive_instance(new_parent, child.get('children'))
             else:
                 Category.objects.update_or_create(name=child.get('name'), parent=parent)
 
